@@ -15,7 +15,6 @@ const Navigation = (props) => {
     <div>
       <button onClick={props.prev}>Global Previous</button>
       <button onClick={props.next}>Global Next</button>
-      <button onClick={onClick}>Submit</button>
     </div>
   );
 };
