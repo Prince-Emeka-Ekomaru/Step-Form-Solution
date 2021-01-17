@@ -9476,6 +9476,11 @@ react-scripts@4.0.1:
   optionalDependencies:
     fsevents "^2.1.3"
 
+react-step-builder@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/react-step-builder/-/react-step-builder-2.0.6.tgz#164b75f34a98e7463f0c5d76136f3750b692840c"
+  integrity sha512-uUlLPC26rh6ZL1GQwLZ4i3xVfAEs5TtbQsB1ROMmTLiEcIvp9/c+GjnI57o9+8e1/cm64or7hQc1O60XNoxs+g==
+
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
