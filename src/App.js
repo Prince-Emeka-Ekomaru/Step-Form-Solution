@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { Steps, Step } from "react-step-builder";
+import Step1 from "./Step1";
+import Step2 from "./Step2";
+import FinalStep from "./FinalStep";
+
+const onClick = () => {
+  console.log('Submitted')
+}
+
+const Navigation = (props) => {
+
+  return (
+    <div>
+      <button onClick={props.prev}>Global Previous</button>
+      <button onClick={props.next}>Global Next</button>
+      <button onClick={onClick}>Submit</button>
+    </div>
+  );
+};
 
 function App() {
+  const config = {
+    navigation: {
+      component: Navigation, // a React component with special props provided automatically
+      location: "before" // or after
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Steps config={config}>
+        <Step component={Step1} />
+        <Step component={Step2} />
+        <Step component={FinalStep} />
+      </Steps>
     </div>
   );
 }
